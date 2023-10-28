@@ -5,6 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-ksdjlas
+
+<a href="{% url "question_add" %}">Soru Ekle</a>
+
+{% for question in question_list %}
+    <p>{{ question.text }} - {{ question.user.username }} - <a href="{% url "question_answer" question.id  %}">Cevap Ver</a></p>
+
+    {% for answer in question.answer_list %}
+        <p>{{ answer.text }} - {{ answer.user.username }}</p>
+    {% endfor %}
+
+{% endfor %}
+
 </body>
 </html>

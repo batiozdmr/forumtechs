@@ -1,0 +1,10 @@
+
+
+<a href="{% url "forum" %}">Ana Sayfa</a>
+<br>
+Soru Giriş Ekranı
+<form method="post">
+    {% csrf_token %}
+    <textarea name="text"></textarea>
+    <button type="submit">Gönder</button>
+</form>
