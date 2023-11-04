@@ -38,9 +38,10 @@ DJANGO_APPS = [
 ]
 
 LOCALE_APPS = [
-    'apps.forum',
+    'apps.main',
     'apps.profiles',
     'apps.parameter',
+    'apps.contact',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCALE_APPS
@@ -69,6 +70,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'apps.parameter.context_processors.site_settings',
+                'apps.parameter.context_processors.menu'
             ],
         },
     },

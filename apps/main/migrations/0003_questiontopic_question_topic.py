@@ -7,7 +7,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('forum', '0002_answer'),
+        ('main', '0002_answer'),
     ]
 
     operations = [
@@ -21,6 +21,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='question',
             name='topic',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.PROTECT, to='forum.questiontopic'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.PROTECT, to='main.questiontopic'),
         ),
     ]

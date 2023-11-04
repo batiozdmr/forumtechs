@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('forum', '0001_initial'),
+        ('main', '0001_initial'),
     ]
 
     operations = [
@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('text', models.TextField()),
                 ('image', models.ImageField(upload_to='')),
                 ('control', models.BooleanField(default=False)),
-                ('question', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='forum.question')),
+                ('question', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='main.question')),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to=settings.AUTH_USER_MODEL)),
             ],
         ),

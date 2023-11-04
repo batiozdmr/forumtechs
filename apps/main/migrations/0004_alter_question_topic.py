@@ -7,13 +7,13 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('forum', '0003_questiontopic_question_topic'),
+        ('main', '0003_questiontopic_question_topic'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='question',
             name='topic',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='forum.questiontopic'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='main.questiontopic'),
         ),
     ]
