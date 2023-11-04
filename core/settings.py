@@ -40,6 +40,7 @@ DJANGO_APPS = [
 LOCALE_APPS = [
     'apps.forum',
     'apps.profiles',
+    'apps.parameter',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCALE_APPS
